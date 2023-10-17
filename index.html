@@ -10,11 +10,18 @@
 
 <body>
     <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script>
-        const heading = document.createElement("h1");
-        heading.innerHTML = "Hello React!";
-        const root = document.getElementById("root");
-        root.appendChild(heading);
+        const heading = React.createElement("h1", {}, "Hello React!!");// this way we create elements in react.
+
+        console.log(heading);
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        // we are saying to react that the main(root) element of our code is that div that has ID as "root".
+
+        //we are passing react element to our DOM
+        root.render(heading);
+
     </script>
 </body>
 
